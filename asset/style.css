@@ -1,0 +1,55 @@
+body {
+    max-width: 1200px;
+    margin: auto;
+    background-image: url(./image/background.jpeg);
+    background-size: cover;
+}
+header {
+   max-width:1200px;
+    margin: auto;
+    height: 200px;
+}
+nav {
+    width: 800px;
+    height: 70px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 50px;
+    background-color: rgba(215, 226, 236, 0.9);
+    padding: 1px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+
+}
+
+header h2 {
+    color: black;
+    padding-top: 13px;
+    font-weight: 900px;
+
+}
+nav button {
+    background-color: rgb(31, 26, 26);
+    width: 140px;
+    height: 60px;
+    color: aliceblue;
+    border-radius: 50px;
+    font-weight: 700;
+    margin-top: 3px;
+}
+#imgBox {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    margin-bottom:200px;
+    justify-content: space-evenly;
+}
+
+#imgBox h1 {
+    max-width: none;
+    max-height: 400px;
+    display: flex;
+    align-items: center;
+    font-size: 90px;
+    color: rgba(215, 226, 236, 0.9);
+}
