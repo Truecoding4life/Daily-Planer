@@ -26,6 +26,10 @@ function checkTime() {
       timeArray[i].addClass("past");
       n++;
     }
+    if (n==dayjs().format("H")){
+      time[i].addClass("present");
+      n++;
+    }
   }
 }
 // AFTER THIS MANY MINUTES UPDATE THE CLOCK
@@ -70,8 +74,8 @@ $('.btn').on('click', function(event) {
 });
 
 function renderSchedule (){
-  var Schedule = JSON.parse(localStorage.getItem("workOrder"))
-  
+  var Schedule = JSON.parse(localStorage.getItem("workOrder"));
+
 }
 
 
