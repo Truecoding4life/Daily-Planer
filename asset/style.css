@@ -10,15 +10,15 @@ header {
     height: 200px;
 }
 nav {
-    width: 800px;
+    width: 1000px;
     height: 70px;
     display: flex;
     justify-content: space-evenly;
     border-radius: 50px;
     background-color: rgba(215, 226, 236, 0.9);
     padding: 1px;
-    margin-top: 50px;
-    margin-bottom: 60px;
+    margin-top: 80px;
+    margin-bottom: 120px;
 
 }
 
@@ -45,11 +45,29 @@ nav button {
     justify-content: space-evenly;
 }
 
-#imgBox h1 {
+#imgBox h1, #imgBox p {
     max-width: none;
     max-height: 400px;
     display: flex;
     align-items: center;
-    font-size: 90px;
+    font-size: 40px;
     color: rgba(215, 226, 236, 0.9);
 }
+#imgBox h1 {
+    font-size: 90px;
+}
+
+#imgBox p {
+    margin-left: 40px;
+}
+.past {
+    color: rgb(224, 10, 10);
+  }
+  
+  .present {
+    color: rgba(21, 216, 73, 0.672);
+  }
+  
+  .future {
+    color: rgb(43, 37, 37);
+  }

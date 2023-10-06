@@ -7,7 +7,11 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./asset/style.css">
     <title> Document </title>
-    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+    integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+    crossorigin="anonymous"
+  ></script>
 
 </head>
 <body>
@@ -24,53 +28,58 @@
 <main>
     <section>
         <div id="imgBox"> 
-            <h1> Work Planer</h1> 
+            <div class="into" style="padding-top: 100px;">
+                <h1> Work Planer </h1> <p id="timeHere"> Hello Time</p>
+            </div>
             <img src="./asset/image/Innovation-amico.png" style="width: 300px;">
         </div>
        <div class="container">
-        <h2 class="col-12 p-3 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4" id="timeDisplay"> Time Display</h3>
-            <h2 class="col-12 p-3 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> Please Schedule with us below</h3>
+                <div class="row">
+                    <h2 class="col-3 p-3 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5" id="timeDisplay"> Time Display</h2>
+                        <h2 class="col-6 p-3 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> Send a Work Request</h2>
+                    <h4 class="col-3 p-3 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> Remember to Save</h4>
+                </div>
             <div class="row">
-                <h4 id="home"class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> 9:00 AM</h4>
-                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-4 " placeholder="Which service would you like to book ? "></input>
-                <button type="button" class="btn btn-primary col-3 p-4 mb-2 rounded-4">Save</button>
+                <h4 id="9AM"class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> 9:00 AM</h4>
+                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-5 " placeholder="Which service would you like to book ? "></input>
+                <button type="button" class=" descr btn btn-primary col-3 p-4 mb-2 rounded-5">Save</button>
             </div>
             <div class="row">
-                <h4 class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> 10:00 AM</h4>
-                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-4" placeholder="Which service would you like to book ? "></input>
-                <button type="button" class="btn btn-primary col-3 p-4 mb-2 rounded-4">Save</button>
+                <h4 id="10AM"class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> 10:00 AM</h4>
+                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-5" placeholder="Which service would you like to book ? "></input>
+                <button type="button" class="descr btn btn-primary col-3 p-4 mb-2 rounded-5">Save</button>
             </div> <div class="row">
-                <h4 class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> 11:00 AM</h4>
-                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-4" placeholder="Which service would you like to book ? "></input>
-                <button type="button" class="btn btn-primary col-3 p-4 mb-2 rounded-4">Save</button>
+                <h4 id="11AM" class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> 11:00 AM</h4>
+                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-5" placeholder="Which service would you like to book ? "></input>
+                <button type="button" class="descr btn btn-primary col-3 p-4 mb-2 rounded-5">Save</button>
             </div> <div class="row">
-                <h4 class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> 12:00 PM</h4>
-                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-4" placeholder="Which service would you like to book ? "></input>
-                <button type="button" class="btn btn-primary col-3 p-4 mb-2 rounded-4">Save</button>
+                <h4 id="12PM" class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> 12:00 PM</h4>
+                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-5" placeholder="Which service would you like to book ? "></input>
+                <button type="button" class="descr btn btn-primary col-3 p-4 mb-2 rounded-5">Save</button>
             </div>
             <div class="row">
-                <h4 class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> 1:00 PM</h4>
-                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-4" placeholder="Which service would you like to book ? "></input>
-                <button type="button" class="btn btn-primary col-3 p-4 mb-2 rounded-4">Save</button>
+                <h4 id="1PM" class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> 1:00 PM</h4>
+                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-5" placeholder="Which service would you like to book ? "></input>
+                <button type="button" class="descr btn btn-primary col-3 p-4 mb-2 rounded-5">Save</button>
             </div> <div class="row">
-                <h4 class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> 2:00 PM</h4>
-                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-4" placeholder="Which service would you like to book ? "></input>
-                <button type="button" class="btn btn-primary col-3 p-4 mb-2 rounded-4">Save</button>
+                <h4 id="2PM" class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> 2:00 PM</h4>
+                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-5" placeholder="Which service would you like to book ? "></input>
+                <button type="button" class="descr btn btn-primary col-3 p-4 mb-2 rounded-5">Save</button>
             </div> <div class="row">
-                <h4 class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> 3:00 PM</h4>
-                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-4" placeholder="Which service would you like to book ? "></input>
-                <button type="button" class="btn btn-primary col-3 p-4 mb-2 rounded-4">Save</button>
+                <h4 id="3PM" class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> 3:00 PM</h4>
+                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-5" placeholder="Which service would you like to book ? "></input>
+                <button type="button" class="descr btn btn-primary col-3 p-4 mb-2 rounded-5">Save</button>
             </div> <div class="row">
-                <h4 class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-4"> 4:00 PM</h4>
-                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-4" placeholder="Which service would you like to book ? "></input>
-                <button type="button" class="btn btn-primary col-3 p-4 mb-2 rounded-4">Save</button>
+                <h4 id="4PM" class="col-3 p-4 mb-2 bg-dark-subtle text-emphasis-dark text-center rounded-5"> 4:00 PM</h4>
+                <input class="col-6 p-4 mb-2 bg-dark-subtle text-emphasis-dark rounded-5" placeholder="Which service would you like to book ? "></input>
+                <button type="button" class="descr btn btn-primary col-3 p-4 mb-2 rounded-5">Save</button>
             </div>
-       </div>
+            
     </section>
 
 </main>
       
-
-<script src="./assets/js/script.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="./asset/script.js"></script>
 </body>
 </html>
