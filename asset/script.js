@@ -39,26 +39,82 @@ function updateClock() {
 setInterval(updateClock, 1000);
 
 
-// THIS WILL SAVE THE INFORMATION TO JSON
-// $(".saveBTN").on("click", function () {
-//   var workOrder = $(this).siblings(".descr").val();
-//   var timeOder = $(this).parent().attr("id");
-//   inputBox.addClass("booked");
 
-//   // save in localStorage
-//   localStorage.setItem(timeOrder, workOrder);
-// });
 $('.btn').on('click', function(event) {
   console.log('Button just got clicked');
   console.log(event.target);
-  // Get the input and time elements
-  var inputElement = $(this).siblings('input'); // Assuming the input is a sibling of the button
-  var timeElement = $(this).siblings('.col-3'); // Assuming the time element has a class of 'col-3'
+
+  // GET THE INPUT TIME ELEMENT
+  var inputElement = $(this).siblings('input'); 
+  var timeElement = $(this).siblings('.col-3');
 
   // Get the values from the elements
   var message = inputElement.val();
   var time = timeElement.text();
-  if (message!==true){ return; };
+
+  // IF THE MESSAGE IS NULL RETURN AND CONSOLE.LOG
+  if (!message) {
+    console.log('Message is empty, not saving to local storage');
+    return;
+  }
+
+  // Create a workOrder object
+  var workOrder = {
+    messages: message,
+    time: time,
+  };
+
+  // I WANT A UNIQUE NAME FOR EACH KEY
+  var uniqueKey = "workOrder_" + new Date().getTime();
+
+
+  console.log('This Hour is booked by client: ' + time);
+  console.log('This Message was sent by client: ' + message);
+
+  // SAVE THAT TO LOCAL STORAGE
+  localStorage.setItem(uniqueKey, JSON.stringify(workOrder));
+});
+
+
+
+// Rendering function to display saved data
+function renderSavedData() {
+  // Iterate through local storage items
+  for (var i = 0; i < localStorage.length; i++) {
+    var key = localStorage.key(i);
+
+    // Check if the key starts with "workOrder_"
+    if (key.startsWith("workOrder_")) {
+      var data = JSON.parse(localStorage.getItem(key));
+
+      // Find the element with the matching time and update its value
+      $(".col-3:contains(" + data.time + ")").siblings("input").val(data.messages);
+    }
+  }
+}
+
+$(document).ready(function() {
+  renderSavedData();
+});
+
+$('.btn').on('click', function(event) {
+  console.log('Button just got clicked');
+  console.log(event.target);
+
+  // Get the input and time elements
+  var inputElement = $(this).siblings('input');
+  var timeElement = $(this).siblings('.col-3');
+
+  // Get the values from the elements
+  var message = inputElement.val();
+  var time = timeElement.text();
+
+
+  if (!message) {
+    console.log('Empty Message ');
+    return;
+  }
+
   // Create a workOrder object
   var workOrder = {
     messages: message,
@@ -66,17 +122,19 @@ $('.btn').on('click', function(event) {
   };
 
   // Generate a unique key for each item in local storage
-  var uniqueKey = "workOrder"
-  console.log('This Hour is booked by client: ' + time)
-  console.log('This Message was sent by client: '+ message )
+  var uniqueKey = "workOrder_" + new Date().getTime();
+
+  // Log the information
+  console.log('This Hour is booked by client: ' + time);
+  console.log('This Message was sent by client: ' + message);
+
   // Save to local storage
   localStorage.setItem(uniqueKey, JSON.stringify(workOrder));
+
+  // Call the rendering function to display the saved data
+  renderSavedData();
 });
 
-function renderSchedule (){
-  var Schedule = JSON.parse(localStorage.getItem("workOrder"));
-
-}
 
 
 
@@ -84,14 +142,6 @@ function renderSchedule (){
 
 
 
-
-  // var InfoSaved = event.target.siblings('input').val();
-// var hourSaved = event.target.parent().attr('.descr')
-// localStorage.setItem('hour is' ,hourSaved);
-// localStorage.setItem('Info Saved is', InfoSaved);
-  // var workOrder = this.event.target().siblings('.descr');
-  // var timeOder = $(this).parent().attr("id");
-  console.log('Info Saved to local Storage')
 
 checkTime();
 updateClock();
