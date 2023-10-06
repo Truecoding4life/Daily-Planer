@@ -71,3 +71,6 @@ nav button {
   .future {
     color: rgb(43, 37, 37);
   }
+  .booked {
+    color: red;
+  }
