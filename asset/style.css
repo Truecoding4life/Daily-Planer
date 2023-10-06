@@ -6,11 +6,11 @@ body {
 }
 header {
    max-width:1200px;
-    margin: auto;
     height: 200px;
+    padding-right: 500px;
 }
 nav {
-    width: 1000px;
+    width: 900px;
     height: 70px;
     display: flex;
     justify-content: space-evenly;

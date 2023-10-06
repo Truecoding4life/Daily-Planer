@@ -36,12 +36,24 @@ setInterval(updateClock, 1000);
 
 
 // THIS WILL SAVE THE INFORMATION TO JSON
-$(".saveBTN").on("click", function () {
-  var workOrder = $(this).siblings(".descr").val();
-  var timeOder = $(this).parent().attr("id");
-  var inputBox = $(this).siblings("input");
-  inputBox.addClass("booked");
+// $(".saveBTN").on("click", function () {
+//   var workOrder = $(this).siblings(".descr").val();
+//   var timeOder = $(this).parent().attr("id");
+//   inputBox.addClass("booked");
 
-  // save in localStorage
-  localStorage.setItem(timeOrder, workOrder);
+//   // save in localStorage
+//   localStorage.setItem(timeOrder, workOrder);
+// });
+$('.btn').on('click', function(){
+  console.log('Button just got click');
+  console.log(event.target);
+var InfoSaved = event.target.siblings('input').val();
+var hourSaved = event.target.parent().attr('.descr')
+localStorage.setItem('hour is' ,hourSaved);
+localStorage.setItem('Info Saved is', InfoSaved);
+  // var workOrder = this.event.target().siblings('.descr');
+  // var timeOder = $(this).parent().attr("id");
+  console.log('Info Saved to local Storage')
 });
+checkTime();
+updateClock();
