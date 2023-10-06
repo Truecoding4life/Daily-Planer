@@ -44,7 +44,7 @@ This project was built using a combination of the following technologies:
 
 ## CREDIT 
 
-I have grew a lot from doing this project from the bottom and with some little help from my tutor session. I have to give credit to myself for spending more than 20 hours on this project and build it up from the ground. It was a nice experience.
+I have to give credit to myself for spending more than 20 hours on this project and build it up from the ground with some little help from my tutor session.
 
 ## PSEUDO CODE
 1.HEADER 
